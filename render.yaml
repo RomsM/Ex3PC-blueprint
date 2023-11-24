@@ -12,7 +12,8 @@ services:
         fromDatabase:
             name: cloud-db
             property: connectionString
+            
 databases:
-  - name: cloud db 
+  - name: cloud-db 
     region: frankfurt
     databaseName: dbBlueprint
