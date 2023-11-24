@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: Ex3PC-blueprint
+    runtime: node
+    repo: https://github.com/RomsM/Ex3PC-blueprint.git 
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key : DATABASE_URL
+        fromDatabase:
+            name: cloud-db
+            property: connectionString
+databases:
+  - name: cloud db 
+    region: frankfurt
+    databaseName: dbBlueprint
